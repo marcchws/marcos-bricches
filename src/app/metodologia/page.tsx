@@ -22,7 +22,6 @@ const MetodologiaPage = () => {
       numero: 1,
       titulo: "Análise Multicamada Obrigatória",
       descricao: "Análise sistemática em 6 camadas: contexto, requisitos, arquitetura, UX, regras e validação técnica",
-      tempo: "30-45 min",
       icone: "Search",
       cor: "from-blue-600 to-indigo-600"
     },
@@ -30,7 +29,6 @@ const MetodologiaPage = () => {
       numero: 2,
       titulo: "Inteligência de Requisitos",
       descricao: "Parser semântico que extrai requisitos explícitos, infere implícitos e identifica ambiguidades",
-      tempo: "15-20 min",
       icone: "Brain",
       cor: "from-purple-600 to-violet-600"
     },
@@ -38,7 +36,6 @@ const MetodologiaPage = () => {
       numero: 3,
       titulo: "Arquitetura de Interface",
       descricao: "Decisão arquitetural baseada em métricas objetivas: componente único vs sistema modular",
-      tempo: "20-30 min",
       icone: "Building",
       cor: "from-green-600 to-emerald-600"
     },
@@ -46,7 +43,6 @@ const MetodologiaPage = () => {
       numero: 4,
       titulo: "Mapeamento de Estados",
       descricao: "100% dos estados UI mapeados: loading, erro, vazio, sucesso, condicionais por contexto",
-      tempo: "25-35 min",
       icone: "GitBranch",
       cor: "from-yellow-600 to-orange-600"
     },
@@ -54,7 +50,6 @@ const MetodologiaPage = () => {
       numero: 5,
       titulo: "Implementação Defensiva",
       descricao: "Código funcional com padrões robustos: tratamento de erros, timeouts, feedback imediato",
-      tempo: "60-120 min",
       icone: "Code",
       cor: "from-red-600 to-pink-600"
     },
@@ -62,7 +57,6 @@ const MetodologiaPage = () => {
       numero: 6,
       titulo: "Validação de Qualidade",
       descricao: "Score automatizado ≥90/100 baseado em heurísticas, acessibilidade e funcionalidade",
-      tempo: "10-15 min",
       icone: "CheckCircle",
       cor: "from-teal-600 to-cyan-600"
     }
@@ -70,28 +64,24 @@ const MetodologiaPage = () => {
 
   const beneficios = [
     {
+      titulo: "Análise em 5 Minutos",
+      descricao: "Mapeamento completo de requisitos em tempo recorde",
+      icone: "Clock",
+    },
+    {
       titulo: "85% Redução de Retrabalho",
       descricao: "Análise sistemática elimina ambiguidades que geram retrabalho",
       icone: "TrendingDown",
-      metrica: "85%"
-    },
-    {
-      titulo: "3x Velocidade de Entrega",
-      descricao: "Automação inteligente acelera processo sem perder qualidade",
-      icone: "Zap",
-      metrica: "3x"
     },
     {
       titulo: "90% Aprovação Primeira Apresentação",
       descricao: "Requisitos 100% mapeados garantem alinhamento com stakeholders",
-      icone: "Target",
-      metrica: "90%"
+      icone: "Target",  
     },
     {
       titulo: "Zero Edge Cases",
       descricao: "Estados UI completos previnem bugs e comportamentos inesperados",
       icone: "Shield",
-      metrica: "0"
     }
   ]
 
@@ -138,8 +128,8 @@ const MetodologiaPage = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Metodologia sistemática que combina análise inteligente de requisitos com 
-              implementação técnica robusta, acelerando entregas e garantindo qualidade excepcional.
+              Metodologia sistemática que realiza análise completa em 5 minutos máximo, 
+              garantindo que cada funcionalidade seja implementada da forma mais assertiva possível.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600">
@@ -167,7 +157,7 @@ const MetodologiaPage = () => {
               Da Interpretação Subjetiva à Análise Sistemática
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Como transformei o processo tradicional de design em uma metodologia precisa e replicável
+              Como transformei análise de requisitos de horas para 5 minutos mantendo 100% de precisão
             </p>
           </div>
           
@@ -227,8 +217,8 @@ const MetodologiaPage = () => {
                   <div className="flex items-start gap-3">
                     <LucideIcons.Check className="h-5 w-5 text-green-500 mt-0.5" />
                     <div>
-                      <p className="font-medium text-green-800">Análise multicamada obrigatória</p>
-                      <p className="text-sm text-green-600">6 camadas de análise sistemática</p>
+                      <p className="font-medium text-green-800">Análise multicamada em 5 minutos</p>
+                      <p className="text-sm text-green-600">6 camadas de análise sistemática e ultrarrápida</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -266,9 +256,14 @@ const MetodologiaPage = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               As 6 Etapas da Metodologia
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto mb-6">
               Processo sistemático que garante qualidade e velocidade em cada entrega
             </p>
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full">
+              <LucideIcons.Zap className="h-5 w-5" />
+              <span className="font-semibold">Análise completa em máximo 5 minutos</span>
+              <LucideIcons.Target className="h-5 w-5" />
+            </div>
           </div>
           
           <div className="grid gap-6">
@@ -286,17 +281,10 @@ const MetodologiaPage = () => {
                           <h3 className="text-xl font-semibold text-gray-900">
                             {etapa.titulo}
                           </h3>
-                          <Badge variant="outline" className="text-sm">
-                            {etapa.tempo}
-                          </Badge>
                         </div>
                         <p className="text-gray-600 mb-4">
                           {etapa.descricao}
                         </p>
-                        <div className="flex items-center gap-2 text-sm text-gray-500">
-                          <IconeComponente className="h-4 w-4" />
-                          <span>Automatizado com IA</span>
-                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -315,7 +303,7 @@ const MetodologiaPage = () => {
               Resultados Comprovados
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Métricas reais de impacto em projetos utilizando a metodologia
+              Métricas reais de impacto: análise rápida e precisa + implementação assertiva
             </p>
           </div>
           
@@ -464,7 +452,7 @@ const MetodologiaPage = () => {
             Quer saber mais sobre a metodologia?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-            Estou sempre aberto para conversar sobre design, IA e processos inovadores
+            Descubra como mapear qualquer funcionalidade em 5 minutos e implementar com máxima assertividade
             </p>
             <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
             <Link href="/contato">
