@@ -14,7 +14,7 @@ const HomePage = () => {
     { valor: "85%", label: "Redução de retrabalho", icone: "TrendingDown" },
     { valor: "3x", label: "Velocidade de entrega", icone: "Zap" },
     { valor: "90%", label: "Aprovação na 1ª apresentação", icone: "CheckCircle" },
-    { valor: "<6h", label: "Tempo médio de desenvolvimento", icone: "Clock" }
+    { valor: "<1h", label: "Tempo médio de desenvolvimento", icone: "Clock" }
   ]
 
   const diferenciais = [

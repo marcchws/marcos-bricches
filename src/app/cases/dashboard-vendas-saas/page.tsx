@@ -93,7 +93,7 @@ const DashboardVendasSaasPage = () => {
   ]
 
   const metricas = [
-    { label: "Tempo de Desenvolvimento", valor: "7h 30min", icone: "Clock", cor: "text-blue-600" },
+    { label: "Tempo de Desenvolvimento", valor: "50min", icone: "Clock", cor: "text-blue-600" },
     { label: "Widgets Criados", valor: "12", icone: "BarChart3", cor: "text-green-600" },
     { label: "Métricas Implementadas", valor: "18", icone: "TrendingUp", cor: "text-purple-600" },
     { label: "Performance Score", valor: "94/100", icone: "Target", cor: "text-orange-600" }
@@ -220,13 +220,13 @@ const DashboardVendasSaasPage = () => {
             
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Dashboard completo para gestão de vendas com métricas em tempo real, pipeline de oportunidades 
-              e análise de performance de vendedores. Desenvolvido em 7h30min usando a metodologia Product Design AI-Enhanced.
+              e análise de performance de vendedores. Desenvolvido em 50min usando a metodologia Product Design AI-Enhanced.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Clock className="h-4 w-4" />
-                <span>7h 30min desenvolvimento</span>
+                <span>50min desenvolvimento</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.BarChart3 className="h-4 w-4" />

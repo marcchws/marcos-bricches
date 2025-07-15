@@ -15,7 +15,7 @@ const SistemaAprovacoesPage = () => {
     produto: "Sistema de Aprovações",
     categoria: "Workflow",
     complexidade: "Médio",
-    tempo: "30min-2h",
+    tempo: "15min",
     tecnologias: ['Next.js', 'TypeScript', 'Tailwind', 'Prisma'],
     funcionalidades: [
       'Múltiplos níveis de aprovação',
@@ -176,7 +176,7 @@ const validarTransicaoStatus = (statusAtual: string, novoStatus: string): boolea
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Clock className="h-4 w-4" />
-                <span>30min-2h desenvolvimento</span>
+                <span>15min desenvolvimento</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Users className="h-4 w-4" />

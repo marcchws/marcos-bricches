@@ -36,10 +36,10 @@ const CaseDetailPage: React.FC<CaseDetailPageProps> = async ({ params }) => {
 
   const formatarTempo = (tempo: string) => {
     switch (tempo) {
-      case '<30min': return 'Menos de 30 minutos'
+      case '<10min': return 'Menos de 10 minutos'
+      case '10-30min': return '10 - 30 minutos'
       case '30min-2h': return '30 minutos - 2 horas'
       case '2h-6h': return '2 horas - 6 horas'
-      case '>6h': return 'Mais de 6 horas'
       default: return tempo
     }
   }

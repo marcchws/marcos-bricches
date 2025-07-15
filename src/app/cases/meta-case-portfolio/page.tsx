@@ -16,7 +16,7 @@ const MetaCasePortfolioPage = () => {
     {
       numero: 1,
       titulo: "Análise Multicamada Obrigatória",
-      tempo: "45 min",
+      tempo: "5 min",
       descricao: "Mapeamento completo do contexto, público-alvo e objetivos do portfólio",
       detalhes: [
         "Contexto: Portfólio para thought leadership + oportunidades",
@@ -29,7 +29,7 @@ const MetaCasePortfolioPage = () => {
     {
       numero: 2,
       titulo: "Inteligência de Requisitos",
-      tempo: "30 min",
+      tempo: "5 min",
       descricao: "Parser semântico dos requisitos e identificação de entidades",
       detalhes: [
         "Entidades: Case, Metodologia, PerfilPessoal",
@@ -42,7 +42,7 @@ const MetaCasePortfolioPage = () => {
     {
       numero: 3,
       titulo: "Arquitetura de Interface",
-      tempo: "20 min",
+      tempo: "8 min",
       descricao: "Decisão arquitetural baseada em métricas de complexidade",
       detalhes: [
         "Complexidade: 28 pontos (>20 = Sistema Modular)",
@@ -55,7 +55,7 @@ const MetaCasePortfolioPage = () => {
     {
       numero: 4,
       titulo: "Mapeamento de Estados UI",
-      tempo: "35 min",
+      tempo: "10 min",
       descricao: "100% dos estados possíveis mapeados e projetados",
       detalhes: [
         "Estados Primários: Loading, sucesso, erro, vazio",
@@ -68,7 +68,7 @@ const MetaCasePortfolioPage = () => {
     {
       numero: 5,
       titulo: "Implementação Defensiva",
-      tempo: "240 min",
+      tempo: "3h 32min",
       descricao: "Desenvolvimento com padrões robustos e validação contínua",
       detalhes: [
         "Padrões: 'use client', montadoRef, timeouts contextualizados",
@@ -94,7 +94,7 @@ const MetaCasePortfolioPage = () => {
   ]
 
   const metricas = [
-    { label: "Tempo Total", valor: "6h 25min", icone: "Clock", cor: "text-blue-600" },
+    { label: "Tempo Total", valor: "4h", icone: "Clock", cor: "text-blue-600" },
     { label: "Score de Qualidade", valor: "96/100", icone: "Target", cor: "text-green-600" },
     { label: "Estados UI Mapeados", valor: "23/23", icone: "CheckCircle", cor: "text-purple-600" },
     { label: "Componentes Criados", valor: "15", icone: "Box", cor: "text-orange-600" }
@@ -216,7 +216,7 @@ const MetaCasePortfolioPage = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Clock className="h-4 w-4" />
-                <span>6h 25min desenvolvimento</span>
+                <span>4h desenvolvimento</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Target className="h-4 w-4" />

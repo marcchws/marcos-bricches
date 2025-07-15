@@ -34,20 +34,20 @@ const CaseCard: React.FC<CaseCardProps> = ({ caso }) => {
 
   const getTempoIcon = (tempo: string) => {
     switch (tempo) {
-      case '<30min': return 'Zap'
+      case '<10min': return 'Zap'
+      case '10-30min': return 'Clock4'
       case '30min-2h': return 'Clock'
       case '2h-6h': return 'Clock3'
-      case '>6h': return 'Clock9'
       default: return 'Clock'
     }
   }
 
   const formatarTempo = (tempo: string) => {
     switch (tempo) {
-      case '<30min': return 'Menos de 30min'
+      case '<10min': return 'Menos de 10min'
+      case '10-30min': return '10 - 30min'
       case '30min-2h': return '30min - 2h'
       case '2h-6h': return '2h - 6h'
-      case '>6h': return 'Mais de 6h'
       default: return tempo
     }
   }

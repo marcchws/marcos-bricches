@@ -79,7 +79,7 @@ const AppDeliveryMobilePage = () => {
     {
       numero: 6,
       titulo: "Rastreamento em Tempo Real",
-      tempo: "120 min",
+      tempo: "15 min",
       descricao: "Sistema de tracking com geolocalização e notificações push",
       detalhes: [
         "Mapa: Localização entregador, rota otimizada",
@@ -92,7 +92,7 @@ const AppDeliveryMobilePage = () => {
   ]
 
   const metricas = [
-    { label: "Tempo de Desenvolvimento", valor: "8h 20min", icone: "Clock", cor: "text-orange-600" },
+    { label: "Tempo de Desenvolvimento", valor: "65min", icone: "Clock", cor: "text-orange-600" },
     { label: "Telas Implementadas", valor: "24", icone: "Smartphone", cor: "text-red-600" },
     { label: "Funcionalidades", valor: "18", icone: "Zap", cor: "text-purple-600" },
     { label: "Performance Score", valor: "96/100", icone: "Target", cor: "text-green-600" }
@@ -229,13 +229,13 @@ const AppDeliveryMobilePage = () => {
             
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Aplicativo mobile para delivery de comida com interface intuitiva, sistema de pedidos em tempo real 
-              e integração com pagamento. Desenvolvido em 8h20min usando React Native e metodologia AI-Enhanced.
+              e integração com pagamento. Desenvolvido em 65min usando React Native e metodologia AI-Enhanced.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Clock className="h-4 w-4" />
-                <span>8h 20min desenvolvimento</span>
+                <span>65min desenvolvimento</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Smartphone className="h-4 w-4" />

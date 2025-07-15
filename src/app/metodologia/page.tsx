@@ -430,7 +430,7 @@ const MetodologiaPage = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-600">6h</div>
+                      <div className="text-2xl font-bold text-purple-600">4h</div>
                       <p className="text-sm text-gray-600">Tempo total desenvolvimento</p>
                     </div>
                     <div className="text-center">

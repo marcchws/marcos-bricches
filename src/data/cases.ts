@@ -39,7 +39,7 @@ export const cases: Case[] = [
       'Gráficos interativos'
     ],
     tecnologias: ['React', 'TypeScript', 'Chart.js', 'Shadcn/UI'],
-    tempoDesenvolvimento: '2h-6h',
+    tempoDesenvolvimento: '30min-2h',
     tags: ['dashboard', 'sales', 'analytics', 'real-time'],
     destaque: false,
     cor_tema: 'from-green-600 to-emerald-600',
@@ -61,7 +61,7 @@ export const cases: Case[] = [
       'Carrinho inteligente'
     ],
     tecnologias: ['React Native', 'TypeScript', 'Expo', 'Stripe'],
-    tempoDesenvolvimento: '>6h',
+    tempoDesenvolvimento: '30min-2h',
     tags: ['mobile', 'delivery', 'real-time', 'payments'],
     destaque: false,
     cor_tema: 'from-orange-600 to-red-600',
@@ -83,7 +83,7 @@ export const cases: Case[] = [
       'Integração com email'
     ],
     tecnologias: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
-    tempoDesenvolvimento: '>6h',
+    tempoDesenvolvimento: '30min-2h',
     tags: ['crm', 'sales', 'automation', 'leads'],
     destaque: false,
     cor_tema: 'from-blue-600 to-indigo-600',
@@ -105,7 +105,7 @@ export const cases: Case[] = [
       'Checkout otimizado'
     ],
     tecnologias: ['Next.js', 'TypeScript', 'Stripe', 'MongoDB'],
-    tempoDesenvolvimento: '>6h',
+    tempoDesenvolvimento: '30min-2h',
     tags: ['ecommerce', 'marketplace', 'payments', 'multi-vendor'],
     destaque: false,
     cor_tema: 'from-purple-600 to-pink-600',
@@ -131,7 +131,7 @@ export const cases: Case[] = [
       'Interface responsiva para mobile e desktop'
     ],
     tecnologias: ['React', 'TypeScript', 'D3.js', 'Node.js', 'Tailwind CSS'],
-    tempoDesenvolvimento: '2h-6h',
+    tempoDesenvolvimento: '30min-2h',
     tags: ['fintech', 'investments', 'analytics', 'finance', 'dashboard', 'portfolio'],
     destaque: false,
     cor_tema: 'from-teal-600 to-cyan-600',
@@ -158,7 +158,7 @@ export const cases: Case[] = [
       'Auditoria completa para compliance'
     ],
     tecnologias: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma'],
-    tempoDesenvolvimento: '30min-2h',
+    tempoDesenvolvimento: '10-30min',
     tags: ['workflow', 'approvals', 'notifications', 'automation', 'corporate'],
     destaque: false,
     cor_tema: 'from-yellow-600 to-orange-600',
@@ -180,7 +180,7 @@ export const cases: Case[] = [
       'Busca rápida'
     ],
     tecnologias: ['React', 'TypeScript', 'Tailwind'],
-    tempoDesenvolvimento: '<30min',
+    tempoDesenvolvimento: '<10min',
     tags: ['tasks', 'kanban', 'simple', 'productivity'],
     destaque: false,
     cor_tema: 'from-slate-600 to-gray-600',
@@ -201,7 +201,7 @@ export const cases: Case[] = [
       'Status online/offline'
     ],
     tecnologias: ['Next.js', 'Socket.io', 'TypeScript', 'MongoDB'],
-    tempoDesenvolvimento: '30min-2h',
+    tempoDesenvolvimento: '10-30min',
     tags: ['chat', 'real-time', 'messaging', 'collaboration'],
     destaque: false,
     cor_tema: 'from-blue-600 to-purple-600',
@@ -222,7 +222,7 @@ export const cases: Case[] = [
       'Call-to-actions'
     ],
     tecnologias: ['Next.js', 'TypeScript', 'Tailwind', 'Framer Motion'],
-    tempoDesenvolvimento: '<30min',
+    tempoDesenvolvimento: '<10min',
     tags: ['landing', 'conversion', 'marketing', 'saas'],
     destaque: false,
     cor_tema: 'from-indigo-600 to-blue-600',
@@ -244,7 +244,7 @@ export const cases: Case[] = [
       'Backup e restore'
     ],
     tecnologias: ['Next.js', 'TypeScript', 'PostgreSQL', 'Redis'],
-    tempoDesenvolvimento: '>6h',
+    tempoDesenvolvimento: '30min-2h',
     tags: ['admin', 'permissions', 'analytics', 'system'],
     destaque: false,
     cor_tema: 'from-red-600 to-pink-600',
@@ -266,7 +266,7 @@ export const cases: Case[] = [
       'Biometria'
     ],
     tecnologias: ['React Native', 'TypeScript', 'Expo', 'Biometrics'],
-    tempoDesenvolvimento: '>6h',
+    tempoDesenvolvimento: '30min-2h',
     tags: ['banking', 'mobile', 'payments', 'security'],
     destaque: false,
     cor_tema: 'from-green-600 to-teal-600',
@@ -287,7 +287,7 @@ export const cases: Case[] = [
       'Fornecedores'
     ],
     tecnologias: ['React', 'TypeScript', 'Node.js', 'MySQL'],
-    tempoDesenvolvimento: '30min-2h',
+    tempoDesenvolvimento: '10-30min',
     tags: ['inventory', 'stock', 'alerts', 'reports'],
     destaque: false,
     cor_tema: 'from-amber-600 to-yellow-600',
@@ -308,7 +308,7 @@ export const cases: Case[] = [
       'Integração WhatsApp'
     ],
     tecnologias: ['Next.js', 'TypeScript', 'Calendar API', 'WhatsApp API'],
-    tempoDesenvolvimento: '30min-2h',
+    tempoDesenvolvimento: '10-30min',
     tags: ['booking', 'calendar', 'restaurant', 'automation'],
     destaque: false,
     cor_tema: 'from-violet-600 to-purple-600',
@@ -329,7 +329,7 @@ export const cases: Case[] = [
       'Aprovação de posts'
     ],
     tecnologias: ['Next.js', 'TypeScript', 'Social APIs', 'Cron Jobs'],
-    tempoDesenvolvimento: '2h-6h',
+    tempoDesenvolvimento: '10-30min',
     tags: ['social-media', 'scheduling', 'analytics', 'content'],
     destaque: false,
     cor_tema: 'from-pink-600 to-rose-600',

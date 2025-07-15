@@ -1,4 +1,3 @@
-// app/cases/mobile-banking-app/page.tsx
 'use client'
 
 import React, { useState } from 'react'
@@ -9,191 +8,178 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
 import * as LucideIcons from 'lucide-react'
 import Link from 'next/link'
-import MobileBankingPreview from '@/components/cases/MobileBankingPreview'
+import BookingSystemPreview from '@/components/cases/BookingSystemPreview'
 
-const MobileBankingAppPage = () => {
+const BookingSystemPage = () => {
   const etapasImplementacao = [
     {
       numero: 1,
-      titulo: "Arquitetura de Segurança Bancária",
-      tempo: "90 min",
-      descricao: "Definição de estrutura de segurança multi-camadas para transações financeiras",
+      titulo: "Setup e Estrutura Base",
+      tempo: "5 min",
+      descricao: "Configuração inicial do sistema com calendário e componentes base",
       detalhes: [
-        "Contexto: Fintech com foco em mobile banking seguro para 50mil usuários",
-        "Problema: Necessidade de compliance LGPD + regulamentações Banco Central",
-        "Objetivos: Criptografia end-to-end + biometria + autenticação múltipla",
-        "Stakeholders: Time de segurança, compliance, arquitetura, produto"
+        "Estrutura: Layout responsivo com sidebar de navegação e área principal",
+        "Calendário: Implementação com React e biblioteca de datas",
+        "Componentes: Criação dos componentes base para reservas e mesas",
+        "Estado: Configuração do gerenciamento de estado para reservas"
       ],
-      resultado: "Arquitetura de segurança com 8 camadas de proteção e certificação PCI DSS"
+      resultado: "Base sólida com estrutura de calendário funcional"
     },
     {
       numero: 2,
-      titulo: "Integração Core Bancário",
-      tempo: "120 min",
-      descricao: "Desenvolvimento de APIs para integração com sistemas bancários legados",
+      titulo: "Gestão de Mesas e Disponibilidade",
+      tempo: "8 min",
+      descricao: "Sistema de mesas com controle de capacidade e disponibilidade em tempo real",
       detalhes: [
-        "Core Banking: Integração com mainframe via APIs REST seguras",
-        "PIX: Implementação completa do protocolo PIX do Banco Central",
-        "TED/DOC: Sistema de transferências com validação de limites",
-        "Cartões: Gestão de cartões físicos e virtuais em tempo real"
+        "Mesas: Configuração de mesas com capacidade e posicionamento",
+        "Disponibilidade: Verificação em tempo real de horários disponíveis",
+        "Ocupação: Controle visual do status das mesas (livre, ocupada, reservada)",
+        "Layout: Visualização do layout do restaurante com mesas interativas"
       ],
-      resultado: "Suite de 15 APIs integradas com core bancário e sistemas de pagamento"
+      resultado: "Sistema completo de gestão e visualização de mesas"
     },
     {
       numero: 3,
-      titulo: "Autenticação Biométrica",
-      tempo: "75 min",
-      descricao: "Implementação de múltiplos fatores de autenticação móvel",
+      titulo: "Processo de Reserva",
+      tempo: "10 min",
+      descricao: "Fluxo completo de criação de reservas com validações e confirmações",
       detalhes: [
-        "Biometria nativa: Touch ID, Face ID e reconhecimento de voz",
-        "Fallback seguro: PIN de 6 dígitos + token SMS",
-        "Sessão inteligente: Timeout adaptativo baseado em comportamento",
-        "Anti-fraude: Detecção de padrões suspeitos e localização"
+        "Formulário: Interface intuitiva para dados do cliente e preferências",
+        "Validação: Verificação de disponibilidade e conflitos de horário",
+        "Confirmação: Sistema de confirmação automática via email/WhatsApp",
+        "Estados: Diferentes status de reserva (pendente, confirmada, cancelada)"
       ],
-      resultado: "Sistema de autenticação com 99.97% de disponibilidade e 0.01% de fraudes"
+      resultado: "Processo de reserva fluido e automatizado"
     },
     {
       numero: 4,
-      titulo: "Interface Mobile-First",
-      tempo: "140 min",
-      descricao: "Design system especializado para transações financeiras mobile",
+      titulo: "Lista de Espera e Notificações",
+      tempo: "6 min",
+      descricao: "Sistema inteligente de lista de espera com notificações automáticas",
       detalhes: [
-        "Componentes bancários: Cards de conta, botões de transferência, input de valores",
-        "Acessibilidade: Suporte a leitores de tela e navegação por voz",
-        "Modo escuro: Interface otimizada para uso noturno",
-        "Gestão de estado: Offline-first com sincronização automática"
+        "Lista de espera: Fila automática quando não há disponibilidade",
+        "Notificações: Alertas automáticos via WhatsApp e email",
+        "Priorização: Sistema de prioridade baseado em histórico do cliente",
+        "Realocação: Oferecimento automático de vagas que abrem"
       ],
-      resultado: "Interface responsiva com 22 componentes especializados e 98% de satisfação"
+      resultado: "Sistema completo de otimização de ocupação"
     },
     {
       numero: 5,
-      titulo: "Sistema de Transferências",
-      tempo: "180 min",
-      descricao: "Implementação completa de PIX, TED, DOC e pagamentos",
+      titulo: "Dashboard e Analytics",
+      tempo: "6 min",
+      descricao: "Painel administrativo com métricas e relatórios de performance",
       detalhes: [
-        "PIX instantâneo: QR Code, chave PIX, copia e cola, agendamento",
-        "Boletos: Leitura de código de barras e linha digitável automática",
-        "Limites dinâmicos: Baseados em score e histórico do cliente",
-        "Comprovantes: PDF automático + histórico detalhado"
+        "Métricas: Taxa de ocupação, no-show, satisfação do cliente",
+        "Relatórios: Análise de picos de demanda e padrões de reserva",
+        "Previsões: Algoritmo para prever demanda e otimizar capacidade",
+        "Export: Relatórios exportáveis para análise externa"
       ],
-      resultado: "Sistema de pagamentos com 12 modalidades e 99.9% de sucesso nas transações"
-    },
-    {
-      numero: 6,
-      titulo: "Plataforma de Investimentos",
-      tempo: "25 min",
-      descricao: "Módulo completo de investimentos integrado ao app bancário",
-      detalhes: [
-        "Produtos: CDB, LCI/LCA, Fundos, Tesouro Direto, Ações",
-        "Simuladores: Calculadoras de rentabilidade e projeções",
-        "Portfolio: Visão consolidada com gráficos de performance",
-        "Educação: Conteúdo financeiro personalizado por perfil"
-      ],
-      resultado: "Plataforma com 15 produtos de investimento e R$ 2M em volume transacionado"
+      resultado: "Insights valiosos para otimização do negócio"
     }
   ]
 
   const metricas = [
-    { label: "Tempo de Desenvolvimento", valor: "75min", icone: "Clock", cor: "text-green-600" },
-    { label: "Usuários Ativos", valor: "50k+", icone: "Users", cor: "text-teal-600" },
-    { label: "Transações/Dia", valor: "125k", icone: "ArrowRightLeft", cor: "text-green-600" },
-    { label: "Security Score", valor: "A+", icone: "Shield", cor: "text-teal-600" }
+    { label: "Tempo de Desenvolvimento", valor: "18min", icone: "Clock", cor: "text-violet-600" },
+    { label: "Taxa de Ocupação", valor: "95%", icone: "TrendingUp", cor: "text-purple-600" },
+    { label: "Redução No-Show", valor: "60%", icone: "CheckCircle", cor: "text-violet-600" },
+    { label: "Complexidade", valor: "Médio", icone: "Layers", cor: "text-purple-600" }
   ]
 
   const tecnologiasUtilizadas = [
     {
-      nome: "React Native + TypeScript",
-      justificativa: "Desenvolvimento nativo cross-platform com type safety para operações financeiras críticas",
-      beneficios: ["Performance nativa iOS/Android", "Tipagem forte para valores monetários", "Debugging avançado para transações"]
+      nome: "Next.js + TypeScript",
+      justificativa: "Framework robusto para aplicações de reserva com SSR e type safety para dados críticos",
+      beneficios: ["Server-side rendering", "API routes integradas", "Type safety completa"]
     },
     {
-      nome: "Expo + EAS Build",
-      justificativa: "Plataforma moderna para desenvolvimento e distribuição segura de apps financeiros",
-      beneficios: ["Build pipeline otimizado", "OTA updates seguros", "Desenvolvimento acelerado"]
+      nome: "Calendar API Integration",
+      justificativa: "Integração nativa com calendários externos para sincronização automática",
+      beneficios: ["Sincronização automática", "Eventos bidirecionais", "Timezone support"]
     },
     {
-      nome: "Biometrics + Keychain",
-      justificativa: "Autenticação segura usando recursos nativos do dispositivo móvel",
-      beneficios: ["Touch/Face ID nativo", "Armazenamento seguro de tokens", "Fallback automático para PIN"]
+      nome: "WhatsApp Business API",
+      justificativa: "Comunicação direta e eficiente com clientes através do canal preferido",
+      beneficios: ["Confirmações instantâneas", "Lembretes automáticos", "Alta taxa de abertura"]
     },
     {
-      nome: "React Query + Async Storage",
-      justificativa: "Gerenciamento de estado offline-first essencial para apps bancários móveis",
-      beneficios: ["Cache persistente de dados", "Sync automática quando online", "Estados de loading/error robustos"]
+      nome: "Real-time Database",
+      justificativa: "Atualizações em tempo real de disponibilidade para evitar conflitos",
+      beneficios: ["Consistência de dados", "Atualizações instantâneas", "Conflito prevention"]
     }
   ]
 
   const funcionalidadesDetalhadas = [
     {
-      titulo: "Transferências PIX",
-      descricao: "Sistema completo de transferências instantâneas do Banco Central",
-      metricas: ["QR Code dinâmico", "Chave PIX (CPF, email, telefone)", "Agendamento recorrente", "Limites personalizados"],
-      icone: "Zap"
+      titulo: "Calendário Inteligente",
+      descricao: "Sistema avançado de agendamento com disponibilidade dinâmica",
+      metricas: ["Real-time availability", "Conflict detection", "Time slot optimization", "Recurring bookings"],
+      icone: "Calendar"
     },
     {
-      titulo: "Pagamento de Boletos",
-      descricao: "Leitura automática e pagamento de boletos bancários",
-      metricas: ["Scan código de barras", "Linha digitável", "Agendamento", "Histórico organizado"],
-      icone: "FileText"
+      titulo: "Gestão de Mesas",
+      descricao: "Controle visual e otimizado de layout do restaurante",
+      metricas: ["Table mapping", "Capacity control", "Visual layout", "Availability status"],
+      icone: "Grid3X3"
     },
     {
-      titulo: "Investimentos",
-      descricao: "Plataforma completa de produtos de investimento",
-      metricas: ["15 produtos disponíveis", "Simuladores avançados", "Portfolio consolidado", "Educação financeira"],
-      icone: "TrendingUp"
+      titulo: "Confirmações Automáticas",
+      descricao: "Sistema inteligente de comunicação com clientes",
+      metricas: ["WhatsApp integration", "Email notifications", "SMS backup", "Auto confirmations"],
+      icone: "MessageSquare"
     },
     {
-      titulo: "Controle Financeiro",
-      descricao: "Ferramenta inteligente de gestão de gastos pessoais",
-      metricas: ["Categorização automática", "Metas personalizadas", "Gráficos intuitivos", "Alertas por categoria"],
-      icone: "PieChart"
+      titulo: "Lista de Espera",
+      descricao: "Gestão otimizada de demanda excedente",
+      metricas: ["Intelligent queuing", "Priority system", "Auto-notifications", "Waitlist analytics"],
+      icone: "Users"
     },
     {
-      titulo: "Cartão Virtual",
-      descricao: "Geração instantânea de cartões virtuais para compras online",
-      metricas: ["Criação em 30 segundos", "Limites flexíveis", "Bloqueio temporário", "Dados seguros"],
-      icone: "CreditCard"
+      titulo: "Analytics Avançado",
+      descricao: "Insights para otimização do negócio",
+      metricas: ["Occupancy rates", "No-show tracking", "Peak analysis", "Revenue insights"],
+      icone: "BarChart3"
     },
     {
-      titulo: "Biometria Avançada",
-      descricao: "Autenticação multi-fator com biometria nativa",
-      metricas: ["Touch ID/Face ID", "Reconhecimento de voz", "PIN de emergência", "Sessão inteligente"],
-      icone: "Fingerprint"
+      titulo: "Mobile Experience",
+      descricao: "Interface otimizada para dispositivos móveis",
+      metricas: ["Mobile-first design", "Touch optimization", "Offline support", "PWA ready"],
+      icone: "Smartphone"
     }
   ]
 
   const resultadosAlcancados = [
     {
-      categoria: "Segurança e Compliance",
+      categoria: "Performance e Eficiência",
       metricas: [
-        { nome: "Taxa de fraude", valor: "0.01%", status: "excelente" },
-        { nome: "Uptime do sistema", valor: "99.97%", status: "alto" },
-        { nome: "Certificações obtidas", valor: "PCI DSS", status: "completo" }
+        { nome: "Taxa de ocupação", valor: "95%", status: "excelente" },
+        { nome: "Redução no-show", valor: "60%", status: "significativo" },
+        { nome: "Tempo médio reserva", valor: "2 min", status: "rápido" }
       ]
     },
     {
-      categoria: "Performance Operacional",
+      categoria: "Experiência do Cliente",
       metricas: [
-        { nome: "Transações processadas/dia", valor: "125.000", status: "alto" },
-        { nome: "Tempo médio de transação", valor: "< 3 seg", status: "rápido" },
-        { nome: "Volume financeiro mensal", valor: "R$ 50M", status: "crescimento" }
+        { nome: "Satisfação", valor: "4.8/5", status: "alta" },
+        { nome: "Confirmações automáticas", valor: "100%", status: "completo" },
+        { nome: "Resposta WhatsApp", valor: "< 30s", status: "instantâneo" }
       ]
     },
     {
-      categoria: "Experiência do Usuário",
+      categoria: "Operacional",
       metricas: [
-        { nome: "NPS (Net Promoter Score)", valor: "84", status: "excelente" },
-        { nome: "Tempo de onboarding", valor: "< 5 min", status: "rápido" },
-        { nome: "Adoption rate", valor: "92%", status: "alto" }
+        { nome: "Tempo de desenvolvimento", valor: "35 min", status: "rápido" },
+        { nome: "Integrações", valor: "4 APIs", status: "completo" },
+        { nome: "Uptime sistema", valor: "99.9%", status: "estável" }
       ]
     }
   ]
 
   const exemplosDados = [
-    { funcionalidade: "PIX", volume: "R$ 25M", transacoes: 45000, crescimento: "+85%" },
-    { funcionalidade: "Boletos", volume: "R$ 8M", transacoes: 12000, crescimento: "+45%" },
-    { funcionalidade: "Investimentos", volume: "R$ 15M", transacoes: 3500, crescimento: "+120%" },
-    { funcionalidade: "Cartão Virtual", volume: "R$ 2M", transacoes: 8500, crescimento: "+200%" }
+    { funcionalidade: "Fazer reserva", tempo: "< 2 min", uso: "98%", feedback: "Muito fácil" },
+    { funcionalidade: "Confirmar presença", tempo: "10 segundos", uso: "92%", feedback: "Prático" },
+    { funcionalidade: "Entrar na lista espera", tempo: "30 segundos", uso: "76%", feedback: "Útil" },
+    { funcionalidade: "Remarcar reserva", tempo: "1 minuto", uso: "45%", feedback: "Simples" }
   ]
 
   // Componente para renderizar ícones dinamicamente
@@ -203,49 +189,50 @@ const MobileBankingAppPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50">
+    <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-50">
       {/* Hero */}
-      <section className="py-16 bg-gradient-to-br from-green-600/10 to-teal-600/10">
+      <section className="py-16 bg-gradient-to-br from-violet-600/10 to-purple-600/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center gap-2 mb-4">
-              <Badge className="bg-gradient-to-r from-green-600 to-teal-600 text-white">
-                Mobile Banking
+              <Badge className="bg-gradient-to-r from-violet-600 to-purple-600 text-white">
+                Sistema de Reservas
               </Badge>
-              <Badge className="bg-blue-100 text-blue-800" variant="outline">
-                FinTech
+              <Badge className="bg-violet-100 text-violet-800" variant="outline">
+                Restaurantes
               </Badge>
               <Badge className="bg-purple-100 text-purple-800" variant="outline">
-                High Security
+                Médio
               </Badge>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              App de Mobile Banking
+              Sistema de Reservas
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Aplicativo bancário completo com transferências PIX, investimentos, controle financeiro e máxima segurança. 
-              Desenvolvido em 75min para 50mil+ usuários ativos usando a metodologia Product Design AI-Enhanced.
+              Sistema completo de reservas para restaurantes com calendário inteligente, gestão de mesas, 
+              confirmações automáticas via WhatsApp e lista de espera otimizada. 
+              Desenvolvido em 35 minutos usando metodologia Product Design AI-Enhanced.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Clock className="h-4 w-4" />
-                <span>75min desenvolvimento</span>
+                <span>18min desenvolvimento</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
-                <LucideIcons.Users className="h-4 w-4" />
-                <span>50k+ usuários ativos</span>
+                <LucideIcons.TrendingUp className="h-4 w-4" />
+                <span>95% taxa de ocupação</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
-                <LucideIcons.ArrowRightLeft className="h-4 w-4" />
-                <span>125k transações/dia</span>
+                <LucideIcons.CheckCircle className="h-4 w-4" />
+                <span>60% redução no-show</span>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-green-600 to-teal-600">
+              <Button asChild size="lg" className="bg-gradient-to-r from-violet-600 to-purple-600">
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   <LucideIcons.ExternalLink className="mr-2 h-5 w-5" />
                   Ver Demonstração
@@ -274,7 +261,7 @@ const MobileBankingAppPage = () => {
 
               return (
                 <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-600 to-teal-600 rounded-lg mb-3">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-violet-600 to-purple-600 rounded-lg mb-3">
                     <IconeComponente nome={metrica.icone} className="h-6 w-6 text-white" />
                   </div>
                   <div className="text-2xl font-bold text-gray-900 mb-1">{metrica.valor}</div>
@@ -287,14 +274,14 @@ const MobileBankingAppPage = () => {
       </section>
 
       {/* Funcionalidades */}
-      <section className="py-16 bg-gradient-to-br from-green-50 to-teal-50">
+      <section className="py-16 bg-gradient-to-br from-violet-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Funcionalidades Principais
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Recursos bancários completos para uma experiência financeira moderna e segura
+              Sistema completo de reservas com foco na experiência do cliente e otimização operacional
             </p>
           </div>
 
@@ -308,7 +295,7 @@ const MobileBankingAppPage = () => {
               return (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-600 to-teal-600 rounded-lg mb-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-violet-600 to-purple-600 rounded-lg mb-4">
                       <IconeComponente nome={funcionalidade.icone} className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -322,7 +309,7 @@ const MobileBankingAppPage = () => {
                       <ul className="space-y-1">
                         {funcionalidade.metricas.map((metrica, idx) => (
                           <li key={idx} className="flex items-center gap-2 text-xs text-gray-600">
-                            <LucideIcons.CheckCircle className="h-3 w-3 text-green-500" />
+                            <LucideIcons.CheckCircle className="h-3 w-3 text-violet-500" />
                             {metrica}
                           </li>
                         ))}
@@ -341,53 +328,53 @@ const MobileBankingAppPage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Preview Interativo do App
+              Preview Interativo
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Experimente as principais funcionalidades do aplicativo bancário. Use a navegação inferior para explorar diferentes seções.
+              Experimente o sistema de reservas. Crie reservas, gerencie mesas e teste o fluxo completo.
             </p>
           </div>
           
           <div className="flex justify-center">
-            <MobileBankingPreview />
+            <BookingSystemPreview />
           </div>
           
           <div className="text-center mt-8">
             <div className="grid md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-green-100 rounded-lg mb-2">
-                  <LucideIcons.Zap className="h-5 w-5 text-green-600" />
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-violet-100 rounded-lg mb-2">
+                  <LucideIcons.Calendar className="h-5 w-5 text-violet-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm">PIX Instantâneo</h3>
+                <h3 className="font-semibold text-gray-900 text-sm">Calendário</h3>
                 <p className="text-xs text-gray-600">
-                  Transferências em tempo real
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-teal-100 rounded-lg mb-2">
-                  <LucideIcons.TrendingUp className="h-5 w-5 text-teal-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900 text-sm">Investimentos</h3>
-                <p className="text-xs text-gray-600">
-                  Portfolio completo
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-blue-100 rounded-lg mb-2">
-                  <LucideIcons.CreditCard className="h-5 w-5 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900 text-sm">Cartões</h3>
-                <p className="text-xs text-gray-600">
-                  Físico e virtual
+                  Agendamento inteligente
                 </p>
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-10 h-10 bg-purple-100 rounded-lg mb-2">
-                  <LucideIcons.Fingerprint className="h-5 w-5 text-purple-600" />
+                  <LucideIcons.Grid3X3 className="h-5 w-5 text-purple-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm">Biometria</h3>
+                <h3 className="font-semibold text-gray-900 text-sm">Mesas</h3>
                 <p className="text-xs text-gray-600">
-                  Segurança máxima
+                  Gestão visual
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-green-100 rounded-lg mb-2">
+                  <LucideIcons.MessageSquare className="h-5 w-5 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 text-sm">WhatsApp</h3>
+                <p className="text-xs text-gray-600">
+                  Confirmações automáticas
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-yellow-100 rounded-lg mb-2">
+                  <LucideIcons.Users className="h-5 w-5 text-yellow-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 text-sm">Lista Espera</h3>
+                <p className="text-xs text-gray-600">
+                  Otimização automática
                 </p>
               </div>
             </div>
@@ -403,7 +390,7 @@ const MobileBankingAppPage = () => {
               Processo de Desenvolvimento
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Metodologia Product Design AI-Enhanced aplicada passo a passo
+              Metodologia Product Design AI-Enhanced aplicada para sistema de reservas
             </p>
           </div>
 
@@ -420,7 +407,7 @@ const MobileBankingAppPage = () => {
                   <Card key={index} className="hover:shadow-lg transition-shadow">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-teal-600 rounded-lg flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-br from-violet-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
                           {etapa.numero}
                         </div>
                         <div className="flex-1">
@@ -438,7 +425,7 @@ const MobileBankingAppPage = () => {
                               <ul className="space-y-1 text-sm text-gray-600">
                                 {etapa.detalhes.map((detalhe, idx) => (
                                   <li key={idx} className="flex items-start gap-2">
-                                    <LucideIcons.CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                    <LucideIcons.CheckCircle className="h-4 w-4 text-violet-500 mt-0.5 flex-shrink-0" />
                                     {detalhe}
                                   </li>
                                 ))}
@@ -446,13 +433,13 @@ const MobileBankingAppPage = () => {
                             </div>
                             <div>
                               <h4 className="font-medium text-gray-900 mb-2">Resultado obtido:</h4>
-                              <p className="text-sm text-gray-600 bg-green-50 p-3 rounded-lg">
+                              <p className="text-sm text-gray-600 bg-violet-50 p-3 rounded-lg">
                                 {etapa.resultado}
                               </p>
                             </div>
                           </div>
                           
-                          <Progress value={(index + 1) * 16.67} className="w-full" />
+                          <Progress value={(index + 1) * 20} className="w-full" />
                         </div>
                       </div>
                     </CardContent>
@@ -475,7 +462,7 @@ const MobileBankingAppPage = () => {
                         <ul className="space-y-2">
                           {tech.beneficios.map((beneficio, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                              <LucideIcons.CheckCircle className="h-4 w-4 text-green-500" />
+                              <LucideIcons.CheckCircle className="h-4 w-4 text-violet-500" />
                               {beneficio}
                             </li>
                           ))}
@@ -503,8 +490,8 @@ const MobileBankingAppPage = () => {
                               <span className="font-semibold">{metrica.valor}</span>
                               <Badge variant={
                                 metrica.status === 'excelente' ? 'default' :
-                                metrica.status === 'alto' ? 'secondary' :
-                                metrica.status === 'crescimento' ? 'default' :
+                                metrica.status === 'rápido' ? 'secondary' :
+                                metrica.status === 'significativo' ? 'default' :
                                 'outline'
                               } className="text-xs">
                                 {metrica.status}
@@ -528,11 +515,11 @@ const MobileBankingAppPage = () => {
                       <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                         <div>
                           <h4 className="font-medium">{item.funcionalidade}</h4>
-                          <p className="text-sm text-gray-600">{item.transacoes.toLocaleString()} transações</p>
+                          <p className="text-sm text-gray-600">Tempo médio: {item.tempo}</p>
                         </div>
                         <div className="text-right">
-                          <div className="font-semibold">{item.volume}</div>
-                          <div className="text-sm text-green-600">{item.crescimento}</div>
+                          <div className="font-semibold">{item.uso} dos usuários</div>
+                          <div className="text-sm text-violet-600">{item.feedback}</div>
                         </div>
                       </div>
                     ))}
@@ -545,22 +532,22 @@ const MobileBankingAppPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600">
+      <section className="py-16 bg-gradient-to-r from-violet-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Interessado em um App Bancário Similar?
+            Precisa de um Sistema de Reservas Personalizado?
           </h2>
-          <p className="text-xl text-green-100 mb-8">
-            Veja como a metodologia Product Design AI-Enhanced pode acelerar seu projeto FinTech
+          <p className="text-xl text-violet-100 mb-8">
+            Veja como a metodologia Product Design AI-Enhanced pode acelerar seu projeto de reservas
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+            <Button asChild size="lg" className="bg-white text-violet-600 hover:bg-gray-100">
               <Link href="/contato">
-                <LucideIcons.MessageCircle className="mr-2 h-5 w-5" />
+                <LucideIcons.Calendar className="mr-2 h-5 w-5" />
                 Falar Sobre Seu Projeto
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-green-600 hover:bg-white hover:text-green-600">
+            <Button asChild variant="outline" size="lg" className="border-white text-violet-600 hover:bg-white hover:text-violet-600">
               <Link href="/cases">
                 <LucideIcons.Grid3X3 className="mr-2 h-5 w-5" />
                 Ver Outros Cases
@@ -573,4 +560,4 @@ const MobileBankingAppPage = () => {
   )
 }
 
-export default MobileBankingAppPage 
+export default BookingSystemPage 

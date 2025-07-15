@@ -54,7 +54,7 @@ const CrmGestaoClientesPage = () => {
     {
       numero: 4,
       titulo: "Pipeline de Leads",
-      tempo: "180 min",
+      tempo: "12 min",
       descricao: "Sistema kanban para gestão visual do funil de vendas",
       detalhes: [
         "Estágios: Lead → Qualificado → Oportunidade → Proposta → Cliente",
@@ -67,7 +67,7 @@ const CrmGestaoClientesPage = () => {
     {
       numero: 5,
       titulo: "Gestão de Interações",
-      tempo: "150 min",
+      tempo: "8 min",
       descricao: "Histórico completo de todas as interações com leads e clientes",
       detalhes: [
         "Timeline: Emails, ligações, reuniões, propostas, contratos",
@@ -80,7 +80,7 @@ const CrmGestaoClientesPage = () => {
     {
       numero: 6,
       titulo: "Automação de Marketing",
-      tempo: "120 min",
+      tempo: "15 min",
       descricao: "Campanhas automatizadas e nurturing de leads",
       detalhes: [
         "Email Marketing: Templates, sequências, A/B testing",
@@ -93,7 +93,7 @@ const CrmGestaoClientesPage = () => {
   ]
 
   const metricas = [
-    { label: "Tempo de Desenvolvimento", valor: "10h 30min", icone: "Clock", cor: "text-blue-600" },
+    { label: "Tempo de Desenvolvimento", valor: "45min", icone: "Clock", cor: "text-blue-600" },
     { label: "Funcionalidades Criadas", valor: "25", icone: "Zap", cor: "text-indigo-600" },
     { label: "Integrações Implementadas", valor: "8", icone: "Puzzle", cor: "text-purple-600" },
     { label: "Automações Configuradas", valor: "15", icone: "Workflow", cor: "text-blue-800" }
@@ -220,13 +220,13 @@ const CrmGestaoClientesPage = () => {
             
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Sistema completo de CRM com gestão de leads, pipeline de vendas, histórico de interações 
-              e automação de marketing. Desenvolvido em 10h30min usando a metodologia Product Design AI-Enhanced.
+              e automação de marketing. Desenvolvido em 45min usando a metodologia Product Design AI-Enhanced.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Clock className="h-4 w-4" />
-                <span>10h 30min desenvolvimento</span>
+                <span>45min desenvolvimento</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Zap className="h-4 w-4" />

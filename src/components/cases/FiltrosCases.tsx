@@ -183,10 +183,10 @@ const FiltrosCasesComponent: React.FC<FiltrosCasesProps> = ({
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="todos">Todos</SelectItem>
-                    <SelectItem value="<30min">Menos de 30min</SelectItem>
+                    <SelectItem value="<10min">Menos de 10min</SelectItem>
+                    <SelectItem value="10-30min">10 - 30min</SelectItem>
                     <SelectItem value="30min-2h">30min - 2h</SelectItem>
                     <SelectItem value="2h-6h">2h - 6h</SelectItem>
-                    <SelectItem value=">6h">Mais de 6h</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

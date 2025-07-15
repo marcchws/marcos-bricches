@@ -93,7 +93,7 @@ const MarketplaceEcommercePage = () => {
   ]
 
   const metricas = [
-    { label: "Tempo de Desenvolvimento", valor: "8h 30min", icone: "Clock", cor: "text-purple-600" },
+    { label: "Tempo de Desenvolvimento", valor: "55min", icone: "Clock", cor: "text-purple-600" },
     { label: "Vendedores Suportados", valor: "100+", icone: "Store", cor: "text-pink-600" },
     { label: "Produtos no Catálogo", valor: "5.000+", icone: "Package", cor: "text-purple-600" },
     { label: "Conversão Checkout", valor: "12.5%", icone: "TrendingUp", cor: "text-pink-600" }
@@ -220,13 +220,13 @@ const MarketplaceEcommercePage = () => {
             
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Plataforma completa de marketplace com múltiplos vendedores, sistema de pagamentos com split automático, 
-              gestão de estoque distribuída e checkout otimizado. Desenvolvido em 8h30min com arquitetura escalável.
+              gestão de estoque distribuída e checkout otimizado. Desenvolvido em 55min com arquitetura escalável.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Clock className="h-4 w-4" />
-                <span>8h 30min desenvolvimento</span>
+                <span>55min desenvolvimento</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <LucideIcons.Store className="h-4 w-4" />

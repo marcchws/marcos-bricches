@@ -197,7 +197,7 @@ const PortfolioPreview: React.FC = () => {
             { valor: "85%", label: "Redução de retrabalho", icone: "TrendingDown" },
             { valor: "3x", label: "Velocidade de entrega", icone: "Zap" },
             { valor: "90%", label: "Aprovação na 1ª apresentação", icone: "CheckCircle" },
-            { valor: "<6h", label: "Tempo médio", icone: "Clock" }
+            { valor: "<1h", label: "Tempo médio", icone: "Clock" }
           ].map((metrica, index) => {
             const IconeComponente = LucideIcons[metrica.icone as keyof typeof LucideIcons] as any
             return (
