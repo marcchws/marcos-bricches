@@ -3,6 +3,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import * as LucideIcons from 'lucide-react'
@@ -26,10 +27,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">MB</span>
-            </div>
-            <span className="font-semibold text-gray-900">Marcos Bricches</span>
+            <Image
+              src="/logo.svg"
+              alt="Marcos Bricches Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8"
+            />
           </Link>
 
           {/* Desktop Menu */}

@@ -3,6 +3,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import * as LucideIcons from 'lucide-react'
 import { perfilPessoal } from '@/data/perfil'
 
@@ -16,9 +17,13 @@ const Footer = () => {
           {/* Sobre */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">MB</span>
-              </div>
+              <Image
+                src="/logo.svg"
+                alt="Marcos Bricches Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
               <span className="font-semibold">Marcos Bricches</span>
             </div>
             <p className="text-gray-400 max-w-md">

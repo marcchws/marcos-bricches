@@ -230,7 +230,7 @@ const MetaCasePortfolioPage = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600">
-                <a href="https://github.com/marcos-bricches/portfolio" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/marcchws/marcos-bricches" target="_blank" rel="noopener noreferrer">
                   <LucideIcons.Github className="mr-2 h-5 w-5" />
                   Ver Código Fonte
                 </a>
