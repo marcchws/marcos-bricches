@@ -48,7 +48,8 @@ const SobrePage = () => {
     tecnico: [
       "Next.js",
       "TypeScript",
-      "Figma", 
+      "Figma",
+      "Cursor (Claude 4)",
       "AI Integration"
     ],
     metodologias: [
@@ -130,9 +131,10 @@ const SobrePage = () => {
                 </p>
                 
                 <p>
-                  Trabalho principalmente com Figma e tenho conhecimentos sólidos em front-end (Next.js, TypeScript), 
-                  o que me permite criar protótipos funcionais e manter uma comunicação mais fluida com equipes 
-                  de desenvolvimento. Essa ponte técnica tem sido fundamental para traduzir visões de produto em realidade.
+                  Trabalho principalmente com Figma e uso o Cursor como editor de código assistido por IA (Claude 4), 
+                  além de ter conhecimentos sólidos em front-end (Next.js, TypeScript). Isso me permite criar 
+                  protótipos funcionais e manter uma comunicação mais fluida com equipes de desenvolvimento. 
+                  Essa ponte técnica tem sido fundamental para traduzir visões de produto em realidade.
                 </p>
                 
                 <p>

@@ -7,7 +7,7 @@ export const perfilPessoal: PerfilPessoal = {
     resumo: "Product Designer com mais de 3 anos de experiência, especializado em criar metodologias que combinam design centrado no usuário com inteligência artificial. Desenvolvedor da metodologia Product Design AI-Enhanced, que acelera entregas e melhora a qualidade através de automação inteligente e padrões defensivos.",
     competencias: [
       "Product Design", "UX Research", "UI Design", "Design Systems", 
-      "AI Integration", "Next.js", "TypeScript", "Figma", "Design Thinking"
+      "AI Integration", "Next.js", "TypeScript", "Figma", "Cursor (Claude 4)", "Design Thinking"
     ],
     diferenciais: [
       "Metodologia proprietária AI-Enhanced",
