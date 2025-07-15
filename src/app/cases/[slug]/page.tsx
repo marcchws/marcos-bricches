@@ -12,13 +12,14 @@ import Link from 'next/link'
 import { obterCasePorId } from '@/data/cases'
 
 interface CaseDetailPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-const CaseDetailPage: React.FC<CaseDetailPageProps> = ({ params }) => {
-  const caso = obterCasePorId(params.slug)
+const CaseDetailPage: React.FC<CaseDetailPageProps> = async ({ params }) => {
+  const { slug } = await params
+  const caso = obterCasePorId(slug)
   
   if (!caso) {
     notFound()
