@@ -316,9 +316,6 @@ const MetodologiaPage = () => {
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg mb-4">
                       <IconeComponente className="h-6 w-6 text-white" />
                     </div>
-                    <div className="text-3xl font-bold text-gray-900 mb-2">
-                      {beneficio.metrica}
-                    </div>
                     <h3 className="font-semibold text-gray-900 mb-2">
                       {beneficio.titulo}
                     </h3>
